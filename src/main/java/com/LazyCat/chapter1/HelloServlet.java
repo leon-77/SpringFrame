@@ -16,7 +16,7 @@ public class HelloServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse reps) throws
             IOException, ServletException {
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm");
         String currentDate = dateFormat.format(new Date());
         req.setAttribute("currentTime", currentDate);
         req.getRequestDispatcher("WEB-INF/jsp/hello.jsp").forward(req, reps);
